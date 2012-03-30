@@ -23,7 +23,13 @@ module ActiveAdmin
       return content.html_safe unless @inputs_with_block
       form_buffers.last << content.html_safe
     end
-
+    def div(cl, id)
+      content = "<div class='#{cl}' id='#{id}'>"
+      return content
+    end
+    def div_close
+      content = "</div>"
+    end
     # The buttons method always needs to be wrapped in a new buffer
     def buttons(*args, &block)
       content = with_new_form_buffer do
