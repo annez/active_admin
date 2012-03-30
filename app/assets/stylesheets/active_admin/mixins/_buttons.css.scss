@@ -1,5 +1,5 @@
 @mixin basic-button {
-  @include rounded(10px);
+  @include rounded(5px);
   display: inline-block;
   font-weight: bold;
   font-size: 1.0em;
