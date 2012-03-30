@@ -25,10 +25,10 @@ module ActiveAdmin
     end
     def div(cl, id)
       content = "<div class='#{cl}' id='#{id}'>"
-      return content
+      form_buffers.last << content
     end
     def div_close
-      content = "</div>"
+      form_buffers.last = "</div>"
     end
     # The buttons method always needs to be wrapped in a new buffer
     def buttons(*args, &block)
