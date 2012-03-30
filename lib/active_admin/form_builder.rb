@@ -73,7 +73,6 @@ module ActiveAdmin
             inputs_for_nested_attributes  :for => [association, object.class.reflect_on_association(association).klass.new],
                                           :class => "inputs has_many_fields",
                                           :for_options => {
-                                            :child_index => "NEW_RECORD"
                                            :child_index => place_holder
                                           }, &form_block
           end
