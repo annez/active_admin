@@ -63,7 +63,7 @@ module ActiveAdmin
       end
 
       content = with_new_form_buffer do
-        template.content_tag :div, :class => "has_many #{association}" do
+        template.content_tag :div, :class => "has_many #{association}", :id => "has_many_#{association}" do
           form_buffers.last << template.content_tag(:h3, association.to_s.titlecase)
           inputs options, &form_block
           model_name = association.to_s.singularize.titlecase
