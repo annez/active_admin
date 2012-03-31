@@ -78,8 +78,7 @@ module ActiveAdmin
           end
 
           js = template.escape_javascript(js)
-          js = template.link_to I18n.t('active_admin.has_many_new', :model => model_name), "#", :onclick => "$(this).before('#{js}'.replace(/#{place_holder}/g, new Date().getTime())); return false;", :class => "button new_button"
-          js = '<button type="button" class="close button">Done</button>'
+          js = template.link_to I18n.t('active_admin.has_many_new', :model => model_name), "#", :onclick => "$(this).before('#{js}'.replace(/#{place_holder}/g, new Date().getTime())); return false;", :class => "button new_button" + '<button type="button" class="close button">Done</button>'
           form_buffers.last << js.html_safe
         end
       end
